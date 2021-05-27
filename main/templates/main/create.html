@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Create New List
+{% endblock %}
+ 
+{% block content %}
+	<h3>Create a New To Do List</h3>
+	<br>
+	<form method="POST" accept="main:create.html" >
+		{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit", name="save">Create</button>
+	</form>
+{% endblock %}
